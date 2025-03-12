@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class forking : MonoBehaviour
 {
     public RectTransform latina;
+    public UnityEvent urmom;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class forking : MonoBehaviour
     public void corn()
     {
         Debug.Log("( ͡° ͜ʖ ͡°)");
-        latina.localScale = Vector3.one * 3f;
+        latina.localScale = Vector3.one * 2f;
     }
 
     public void cob()

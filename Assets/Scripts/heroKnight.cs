@@ -8,6 +8,8 @@ public class heroKnight : MonoBehaviour
     Animator anim;
     SpriteRenderer yumyum;
     public bool canRun = true;
+    AudioClip clip;
+    AudioSource wiwiwi;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,7 @@ public class heroKnight : MonoBehaviour
         {
             anim.SetTrigger("slash"); // triggers the slash in animation when mouse button clicked
             canRun = false;
+            wiwiwi.Play();
         }
 
         if (canRun == true) // makes so that guy can only move AFTER the attack animation has finished

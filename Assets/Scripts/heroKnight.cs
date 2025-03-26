@@ -16,6 +16,7 @@ public class heroKnight : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         yumyum = GetComponent<SpriteRenderer>();
+        wiwiwi = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,7 +31,6 @@ public class heroKnight : MonoBehaviour
         {
             anim.SetTrigger("slash"); // triggers the slash in animation when mouse button clicked
             canRun = false;
-            wiwiwi.Play();
         }
 
         if (canRun == true) // makes so that guy can only move AFTER the attack animation has finished
@@ -43,5 +43,11 @@ public class heroKnight : MonoBehaviour
     {
         canRun = true;
         Debug.Log("duck duck goose");
+    }
+
+    public void beepboop() //public void for footspstes
+    {
+        wiwiwi.Play();
+        Debug.Log("step step");
     }
 }

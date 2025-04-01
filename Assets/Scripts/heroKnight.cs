@@ -12,7 +12,7 @@ public class heroKnight : MonoBehaviour
     public bool canRun = true;
     AudioClip clip;
     AudioSource wiwiwi;
-    public CinemachineImpulseSource urmo;
+    public CinemachineImpulseSource urmo; 
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +51,7 @@ public class heroKnight : MonoBehaviour
     public void beepboop() //public void for footspstes
     {
         wiwiwi.Play();
-        urmo.GenerateImpulse();
+        urmo.GenerateImpulse(); // makes screen shake when called
         Debug.Log("step step");
     }
 }

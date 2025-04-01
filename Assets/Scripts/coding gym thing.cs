@@ -18,12 +18,12 @@ public class codinggymthing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // makes knight appear where mouse pos is when i hit spacebar
         if (Input.GetKeyDown(KeyCode.Space))
         {
             morple.transform.position = pos;
         }
        
-       Tilemap 
+       //Tilemap 
     }
 }

@@ -17,6 +17,7 @@ public class clouds : MonoBehaviour
     void Start()
     {
         timerthing = StartCoroutine(backgroundwoosh());
+        Debug.Log("bazinga");
     }
 
     // Update is called once per frame
@@ -25,11 +26,7 @@ public class clouds : MonoBehaviour
         Vector3 pos = transform.position; // makes cloud move upwards forever
         pos.y += speed * Time.deltaTime;
 
-        Vector3 direction = (Vector3)transform.position;
-        transform.up = direction;
-
         transform.position = pos;
-
     }
 
     private IEnumerator backgroundwoosh ()
@@ -40,7 +37,7 @@ public class clouds : MonoBehaviour
         while (timecount < timeyay)
         {
            timecount += Time.deltaTime;
-            yield return null;
+            yield return null; // loops this till timecount > timeyay and then moves on to the lower lines (instantiate)
         }
 
         Instantiate(cloud, new Vector3 (-8, -5, 0), Quaternion.identity); // instantite clouds at (-8, -5)

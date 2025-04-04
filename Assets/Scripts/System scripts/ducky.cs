@@ -22,5 +22,6 @@ public class ducky : MonoBehaviour
     public void bangbang() // public void so i can call this through inspector
     {
         Destroy(duckduck); // destroy gameobject when called upon
+        Debug.Log("duckduck exploded :(");
     }
 }

@@ -37,7 +37,6 @@ public class clouds : MonoBehaviour
         timeyay = Random.Range(2, 5); // gives a random time value from the range 2 - 5
         Destroy(cloud, 3); // destroy the c louds after 3 sec
 
-
         while (timecount < timeyay)
         {
            timecount += Time.deltaTime;
@@ -45,6 +44,6 @@ public class clouds : MonoBehaviour
         }
 
         Instantiate(cloud, new Vector3 (-8, -5, 0), Quaternion.identity); // instantite clouds at (-8, -5)
-       
+        Debug.Log("oh look a cloud");
     }
 }

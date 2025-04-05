@@ -18,6 +18,7 @@ public class clouds : MonoBehaviour
     {
         timerthing = StartCoroutine(backgroundwoosh());
         Debug.Log("bazinga");
+        
     }
 
     // Update is called once per frame
@@ -32,7 +33,7 @@ public class clouds : MonoBehaviour
     private IEnumerator backgroundwoosh ()
     {
         timeyay = Random.Range(2, 5); // gives a random time value from the range 2 - 5
-        Destroy(cloud, 3); // destroy the c louds after 3 sec
+        timecount = 0; // resets the timer
 
         while (timecount < timeyay)
         {
@@ -41,6 +42,7 @@ public class clouds : MonoBehaviour
         }
 
         Instantiate(cloud, new Vector3 (-8, -5, 0), Quaternion.identity); // instantite clouds at (-8, -5)
+        Destroy(cloud); // destroy the c louds
         Debug.Log("oh look a cloud");
     }
 }

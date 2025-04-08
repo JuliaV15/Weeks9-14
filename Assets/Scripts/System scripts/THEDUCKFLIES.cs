@@ -34,7 +34,7 @@ public class THEDUCKFLIES : MonoBehaviour
 
     IEnumerator THEDUCKWALKEDUPTOTHE()
     {
-        THENOTOGtimeyay = Random.Range(2, 5); // gives a random time value from the range 2 - 5
+        THENOTOGtimeyay = Random.Range(2, 3); // gives a random time value from the range 2 - 3
         THEREALtimecount = 0; // resets the timer
 
         while (THEREALtimecount < THENOTOGtimeyay)
@@ -43,12 +43,10 @@ public class THEDUCKFLIES : MonoBehaviour
             yield return null; // loops this till timecount > timeyay and then moves on to the lower lines (instantiate)
         }
 
-        Instantiate(LEMONADESTAND, new Vector3(Random.Range(1200, 500), -352, 0), Quaternion.identity, canvasparent.transform);
+        Instantiate(LEMONADESTAND, new Vector3(Random.Range(500, 1200), -352, 0), Quaternion.identity, canvasparent.transform);
         Debug.Log("grape lemonade");
 
         Destroy(LEMONADESTAND);
         Debug.Log("go away duck or ill duct tape you to a tree duck");
-
-        yield return null;
     }
 }

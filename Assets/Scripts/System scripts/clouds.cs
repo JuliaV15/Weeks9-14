@@ -41,7 +41,7 @@ public class clouds : MonoBehaviour
             yield return null; // loops this till timecount > timeyay and then moves on to the lower lines (instantiate)
         }
 
-        Instantiate(cloud, new Vector3 (-8, -5, 0), Quaternion.identity); // instantite clouds at (-8, -5)
+        Instantiate(cloud, new Vector3 (Random.Range (-9, 9), -5, 0), Quaternion.identity); // instantite clouds at (-8, -5)
         Destroy(cloud); // destroy the c louds
         Debug.Log("oh look a cloud");
     }

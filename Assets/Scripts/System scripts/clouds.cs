@@ -16,7 +16,7 @@ public class clouds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timerthing = StartCoroutine(backgroundwoosh());
+        timerthing = StartCoroutine(backgroundwoosh()); // starts running the coroutine "backgroundwoosh"
         Debug.Log("bazinga");
         
     }
@@ -41,7 +41,7 @@ public class clouds : MonoBehaviour
             yield return null; // loops this till timecount > timeyay and then moves on to the lower lines (instantiate)
         }
 
-        Instantiate(cloud, new Vector3 (Random.Range (-9, 9), -5, 0), Quaternion.identity); // instantite clouds at (-8, -5)
+        Instantiate(cloud, new Vector3 (Random.Range (-9, 9), -5, 0), Quaternion.identity); // instantite clouds at a random x range between (-9, 9) and at y -5
         Destroy(cloud); // destroy the c louds
         Debug.Log("oh look a cloud");
     }
